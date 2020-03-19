@@ -13,7 +13,7 @@ class IndexActivity : AppCompatActivity() {
         init();
         buttonAction();
     } private fun init() {
-        btnRoom = findViewById(R.id.btnRoom) as Button
+        btnRoom = findViewById(R.id.btnRoom)
     }
 
     private fun buttonAction() {
