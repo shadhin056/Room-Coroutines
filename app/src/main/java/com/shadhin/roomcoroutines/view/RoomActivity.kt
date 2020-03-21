@@ -3,6 +3,7 @@ package com.shadhin.roomcoroutines.view
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
+import com.devtides.coroutinesroom.viewmodel.LoginViewModel
 import com.shadhin.roomcoroutines.R
 
 class RoomActivity : AppCompatActivity() {
