@@ -34,12 +34,12 @@ class MainFragment : Fragment() {
     }
 
     fun observeViewModel() {
-//        viewModel.signout.observe(this, Observer {
-//
-//        })
-//        viewModel.userDeleted.observe(this, Observer {
-//
-//        })
+        viewModel.signout.observe(this, Observer {
+
+        })
+        viewModel.userDeleted.observe(this, Observer {
+
+        })
     }
 
     private fun onSignout() {

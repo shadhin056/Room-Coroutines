@@ -34,14 +34,14 @@ class LoginFragment : Fragment() {
     }
 
     private fun observeViewModel() {
-//        viewModel.loginComplete.observe(this, Observer { isComplete ->
-//
-//        })
-//
-//        viewModel.error.observe(this, Observer { error ->
-//
-//
-//        })
+        viewModel.loginComplete.observe(this, Observer { isComplete ->
+
+        })
+
+        viewModel.error.observe(this, Observer { error ->
+
+
+        })
     }
     private fun onLogin(v: View) {
         navController!!.navigate(R.id.action_loginFragment_to_mainFragment)

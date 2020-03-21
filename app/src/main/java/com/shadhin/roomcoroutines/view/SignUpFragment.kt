@@ -35,13 +35,13 @@ class SignUpFragment : Fragment() {
     }
 
     private fun observeViewModel() {
-//        viewModel.signupComplete.observe(this, Observer { isComplete ->
-//
-//        })
-//
-//        viewModel.error.observe(this, Observer { error ->
-//
-//        })
+        viewModel.signupComplete.observe(this, Observer { isComplete ->
+
+        })
+
+        viewModel.error.observe(this, Observer { error ->
+
+        })
     }
 
     private fun onSignup(v: View){
