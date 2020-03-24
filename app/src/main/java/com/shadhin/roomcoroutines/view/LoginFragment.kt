@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.NavController
@@ -35,16 +36,24 @@ class LoginFragment : Fragment() {
 
     private fun observeViewModel() {
         viewModel.loginComplete.observe(this, Observer { isComplete ->
-
+            Toast.makeText(activity, "Login Complete", Toast.LENGTH_LONG).show()
+            navController!!.navigate(R.id.action_loginFragment_to_mainFragment)
         })
 
         viewModel.error.observe(this, Observer { error ->
-
+            Toast.makeText(activity, error, Toast.LENGTH_LONG).show()
 
         })
     }
     private fun onLogin(v: View) {
-        navController!!.navigate(R.id.action_loginFragment_to_mainFragment)
+        var userName=loginUsername.text.toString()
+        var password=loginPassword.text.toString()
+        if(userName.isNullOrEmpty()||password.isNullOrEmpty()){
+            Toast.makeText(activity, "Please fill up the field", Toast.LENGTH_LONG).show()
+        }else{
+            viewModel.login(userName,password)
+        }
+        //navController!!.navigate(R.id.action_loginFragment_to_mainFragment)
     }
     private fun onGotoSignup(v: View){
         navController!!.navigate(R.id.action_loginFragment_to_signUpFragment)
